@@ -16,6 +16,7 @@ public static void main(String[] args) {
         sort(a);
 
         System.out.println("sorted array: ");
-        for (int j : arr) {
+        for (int j : a) {
             System.out.println(j);
         }
+}
