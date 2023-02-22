@@ -52,7 +52,7 @@ public class DoublingTest_InsertionSort_binarysearch {
 			// (@nathana) I had to wrap the int[] a array into Integer[] arr so that it matches with the input field for sort
 				Integer[] arr = new Integer[a.length];
 				Arrays.setAll(arr, i -> a[i]);
-			// (@nathana) Calling the Insertion sort method here
+			// (@nathana) Calling the Binary Search Insertion sort method here
 			Insertion_binarysearch.sort(arr);
 
 			double time = s.elapsedTime();
