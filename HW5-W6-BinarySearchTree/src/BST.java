@@ -1,6 +1,10 @@
+/**
+ * Student: Nathan Ayele
+ * Class: CS302 - Design and Analysis of Algorithms | CaldwellSpring'23
+ * Date: March 8th, 2023
+ */
 import java.util.ArrayList;
 import java.util.Scanner;
-import java.util.prefs.BackingStoreException;
 
 public class BST<Key extends Comparable<Key>, Value> {
 	Node root;
