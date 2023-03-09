@@ -94,11 +94,9 @@ public class BST<Key extends Comparable<Key>, Value> {
 			parent = x;
 			x = x.left;
 		}
-		if (parent == null) {
-			root = x.right;
-		} else {
-			parent.left = x.right;
-		}
+		
+		parent.left = x.right;
+		
 		return x;
 	}
 
@@ -264,6 +262,25 @@ public class BST<Key extends Comparable<Key>, Value> {
 			return root.value;
 	}
 
+	// GET LEVEL METHOD
+	public int getLevel(Key key){
+		Node x = root;
+		int count = 0;
+		while (x != null) {
+			int cmp = key.compareTo(x.key);
+			if (cmp < 0){
+				x = x.left;
+				count ++;}
+			else if (cmp > 0){
+				x = x.right;
+				count ++;}
+			else {
+				return count;
+			}
+		}
+		return -1;
+	}
+
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
 
@@ -287,6 +304,8 @@ public class BST<Key extends Comparable<Key>, Value> {
 			System.out.println("80. countValue");
 			System.out.println("81. getParentKey");
 			System.out.println("82. balanceMe");
+
+			System.out.println("83. getLevel");
 
 			switch (in.nextLine()) {
 				case "1":
@@ -335,7 +354,7 @@ public class BST<Key extends Comparable<Key>, Value> {
 					break;
 				case "80":
 					System.out.println("Please enter value");
-					System.out.println("Count of Value: " + bst.countValue(Integer.valueOf(in.nextLine())));//check this
+					System.out.println("Count of Value: " + bst.countValue(Integer.valueOf(in.nextLine())));
 					break;
 				case "81":
 					System.out.println("Please enter key");
@@ -345,6 +364,10 @@ public class BST<Key extends Comparable<Key>, Value> {
 					bst.balanceMe();
 					System.out.println("Your tree has been balanced.");	
 					System.out.println(bst);
+					break;
+				case "83":
+					System.out.println("Please enter key:");
+					System.out.println("Level: " + bst.getLevel(in.nextLine().charAt(0)));
 					break;
 				case "9":
 					System.out.println(bst);
