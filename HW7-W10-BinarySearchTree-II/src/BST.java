@@ -229,7 +229,7 @@ public class BST<Key extends Comparable<Key>, Value>
 	{
 		Scanner in = new Scanner(System.in);
 
-		BST<Character, Integer> bst = new BST();
+		BST<Character, Integer> bst = new BST<Character, Integer>();
 
 		while (true)
 		{
@@ -288,8 +288,12 @@ public class BST<Key extends Comparable<Key>, Value>
 			case "9":
 				System.out.println(bst);
 				break;
+			default:
+				break;
 			}
+			in.close();
 		}
+		
 	}
 	
 	private Object[] toArrayRepresentation()

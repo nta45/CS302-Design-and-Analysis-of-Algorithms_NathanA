@@ -1,0 +1,56 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "BST",
+            "request": "launch",
+            "mainClass": "BST",
+            "projectName": "CS302-Design-and-Analysis-of-Algortithms_NathanA_f854247b"
+        },
+        {
+            "type": "java",
+            "name": "CycleDetector",
+            "request": "launch",
+            "mainClass": "CycleDetector",
+            "projectName": "CS302-Design-and-Analysis-of-Algortithms_NathanA_f854247b"
+        },
+        {
+            "type": "java",
+            "name": "Graph",
+            "request": "launch",
+            "mainClass": "Graph",
+            "projectName": "CS302-Design-and-Analysis-of-Algortithms_NathanA_f854247b"
+        },
+        {
+            "type": "java",
+            "name": "LongestIncreasingSequenceHW_NA",
+            "request": "launch",
+            "mainClass": "LongestIncreasingSequenceHW_NA",
+            "projectName": "CS302-Design-and-Analysis-of-Algortithms_NathanA_f854247b"
+        },
+        {
+            "type": "java",
+            "name": "app",
+            "request": "launch",
+            "mainClass": "app",
+            "projectName": "CS302-Design-and-Analysis-of-Algortithms_NathanA_f854247b"
+        },
+        {
+            "type": "java",
+            "name": "ed",
+            "request": "launch",
+            "mainClass": "ed",
+            "projectName": "CS302-Design-and-Analysis-of-Algortithms_NathanA_f854247b"
+        }
+    ]
+}
