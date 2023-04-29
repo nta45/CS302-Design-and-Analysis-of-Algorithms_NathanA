@@ -34,7 +34,7 @@ public class App {
         for (int i = 0; i < flight.size(); i++) {
             G.addEdge(new DirectedEdge(originSI.getCode(origin.get(i)), flightSI.getCode(flight.get(i)),
                     cost.get(i)));
-            // G.addEdge(new DirectedEdge(flightSI.getCode(flight.get(i)), destinationSI.getCode(destination.get(i)), cost.get(i)));
+            G.addEdge(new DirectedEdge(flightSI.getCode(flight.get(i)), destinationSI.getCode(destination.get(i)), cost.get(i)));
         }
         System.out.println(G);
 
