@@ -38,8 +38,8 @@ public class App {
         }
         System.out.println(G);
 
-        DijkstraSP ewr = new DijkstraSP(G, originSI.getCode("EWR"));
-        System.out.println(ewr.pathTo(destinationSI.getCode("DL1569")));
+        // DijkstraSP ewr = new DijkstraSP(G, originSI.getCode("EWR"));
+        // System.out.println(ewr.pathTo(destinationSI.getCode("DL1569")));
         // print out the sp result with the string representation
         // for (DirectedEdge e : ewr.pathTo(destinationSI.getCode("PBI"))) {
         //     System.out.println(originSI.getString(e.from()) + " to " + destinationSI.getString(e.to()) + " ($"
