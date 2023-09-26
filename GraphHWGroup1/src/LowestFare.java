@@ -7,13 +7,11 @@ import java.util.Stack;
 
 public class LowestFare {
     public static void main(String[] args) throws Exception {
-        //read a csv file
-        String fileName = "FlightCostsSmall119.csv";
         String line = "";
         ArrayList<String> flight = new ArrayList<String>();
         ArrayList<Double> cost = new ArrayList<Double>();
 
-        try (BufferedReader br = new BufferedReader(new FileReader(fileName))) {
+        try (BufferedReader br = new BufferedReader(new FileReader("src/FlightCostsSmall119.csv"))) {
             br.readLine();
             while ((line = br.readLine()) != null) {
                 String[] values = line.split(",");

@@ -5,6 +5,7 @@
  */
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.PriorityQueue;
 
 public class RadixSortHW {
 	public static int width(int[] a) {
@@ -64,9 +65,19 @@ public class RadixSortHW {
 	public static void main(String[] args) {
 		int[] a = new int[] { 333, 22, 0, 1, 666666, 5475, 99, 4444, 2, 77 };
 
-		System.out.println(Arrays.toString(a));
-		sort(a);
-		System.out.println(Arrays.toString(a));
+		// System.out.println(Arrays.toString(a));
+		// sort(a);
+		// System.out.println(Arrays.toString(a));
+		fibonnacith(3);
+			
+		
 
+	}
+
+	public static void fibonnacith(int n){
+		
+		for (int i = 0, j = 1; i<n; i++, j--){
+			System.out.println("i: " + i + ", j: " +  j);
+		}
 	}
 }

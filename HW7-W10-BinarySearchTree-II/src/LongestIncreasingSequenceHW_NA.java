@@ -7,6 +7,7 @@
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 
 /*
@@ -92,19 +93,15 @@ public class LongestIncreasingSequenceHW_NA
 		}
 
 		ArrayList seq = new ArrayList<>();
-		boolean done = false;
-		while (!done){
-			for (int x = T.length-1; x > 0; x--){
-				if (T[x] == max(T)){
-					seq.add(A[x]);
+		for (int x = T.length-1; x > 0; x--){
+			if (T[x] == max(T)){
+				seq.add(A[x]);
 
-					while(prev[x] != -1){
-						seq.add(A[prev[x]]);
-						x = prev[x];
-					}
-					done = true;
-					break;
+				while(prev[x] != -1){
+					seq.add(A[prev[x]]);
+					x = prev[x];
 				}
+				break;
 			}
 		}
 		
@@ -115,14 +112,39 @@ public class LongestIncreasingSequenceHW_NA
 
 	public static void main(String[] args)
 	{
-		int[] a = { 7, 2, 1, 3, 8, 4, 9, 1, 2, 6, 5, 9, 3, 8, 1 };
-		System.out.println(Arrays.toString(a));
-		System.out.println("Length: " + lis1(a));
-		System.out.println("Length: " + lis2(a));
+		// int[] a = { 7, 2, 1, 3, 8, 4, 9, 1, 2, 6, 5, 9, 3, 8, 1 };
+		// System.out.println(Arrays.toString(a));
+		// System.out.println("Length: " + lis1(a));
+		// System.out.println("Length: " + lis2(a));
 		
-		a = new	int[] { 7, 2, 0, 1, 3, 8, 4, 9, 1, 2, 6, 5, 9, 3, 8, 1, 11 };
-		System.out.println(Arrays.toString(a));
-		System.out.println("Length: " + lis1(a));
-		System.out.println("Length: " + lis2(a));
+		// a = new	int[] { 7, 2, 0, 1, 3, 8, 4, 9, 1, 2, 6, 5, 9, 3, 8, 1, 11 };
+		// System.out.println(Arrays.toString(a));
+		// System.out.println("Length: " + lis1(a));
+		// System.out.println("Length: " + lis2(a));
+
+		
+			int[] nums = {0,1,2,4,5,7};
+			System.out.println(summaryRanges(nums));
+			
 	}
+	public static List<String> summaryRanges(int[] nums) {
+        List<String> list = new ArrayList<>();
+        String s = "";
+        s += nums[0];
+        for(int i=1; i < nums.length; i++){
+            if(nums[i] == nums[i-1] + 1){
+                continue;
+            } 
+			if(i == nums.length-1){
+				s += nums[i];
+			}
+                s +=  "->" + nums[i-1];
+                list.add(s); 
+                s = "" + nums[i];
+				   
+            
+        }
+        return list;
+    }
+
 }
