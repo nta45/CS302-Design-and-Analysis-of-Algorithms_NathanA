@@ -1,4 +1,5 @@
 import java.util.Random;
+import java.util.*;
 
 public class Doubling
 {
@@ -42,14 +43,16 @@ public class Doubling
 	 * are distinct.  Return true if there are no duplicates
 	 */
 
-	public static boolean distinct(int[] a){
-	//Nathan Ayele - CS302 - Jan252023
-		for (int i=0; i <a.length; i++){
-			for(int j=0; j<i; j++){
-				if (a[i]==a[j]){return false;}
+	public static boolean distinct(int[] a) {
+		Set<Integer> set = new HashSet<>();
+
+		for (int num : a) {
+			if (set.contains(num)) {
+				return false; // Found a duplicate element
 			}
+			set.add(num);
 		}
-		return true;
+		return true; // No duplicates found
 	}
 
 	public static void main(String[] args)
